@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ServiceNow Developer & Platform Expert | Fiverr Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --sn-green: #29b673;
+      --sn-teal: #00d2a0;
+      --sn-navy: #032d42;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --fiverr-green: #1dbf73;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 0;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      background: linear-gradient(90deg, #29b673, #00d2a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--text);
+    }
+    .fiverr-btn {
+      background: var(--fiverr-green);
+      color: #fff !important;
+      padding: 0.5rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 700 !important;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .fiverr-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    header.hero {
+      padding: 5rem 0 3.5rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      background: rgba(41, 182, 115, 0.12);
+      border: 1px solid rgba(41, 182, 115, 0.3);
+      border-radius: 9999px;
+      color: var(--sn-green);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+    h1 span {
+      background: linear-gradient(90deg, #29b673, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .lead {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-secondary {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 0.65rem 1.3rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover {
+      background: #1f2937;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* Services / Fiverr Gigs */
+    section {
+      padding: 3.5rem 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(41, 182, 115, 0.4);
+    }
+    .card-tag {
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      color: var(--sn-green);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .price-est {
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    /* Skills Cloud */
+    .skills-filter {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--sn-green);
+      color: #000;
+      border-color: var(--sn-green);
+      font-weight: 600;
+    }
+    .tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .tech-pill {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #e2e8f0;
+    }
+
+    /* Trust / Why Hire Me */
+    .features-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .feature-item {
+      background: rgba(17, 24, 39, 0.5);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .feature-item h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+      color: #f3f4f6;
+    }
+    .feature-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2.5rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 2.1rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">SN.Expert</div>
+      <div class="nav-links">
+        <a href="#services">Gigs & Services</a>
+        <a href="#skills">Competencies</a>
+        <a href="#projects">Use Cases</a>
+        <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn">Hire on Fiverr ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge">Certified ServiceNow Specialist • Available for Hire</div>
+      <h1>Enterprise <span>ServiceNow</span> Customization & Automation</h1>
+      <p class="lead">
+        I build scalable workflows, custom Service Portals, Script Includes, Flow Designer actions, and seamless REST/JSON API integrations to automate your business operations.
+      </p>
+      <div class="cta-row">
+        <!-- REPLACE WITH YOUR ACTUAL FIVERR PROFILE URL -->
+        <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="padding: 0.75rem 1.6rem; font-size: 1rem;">Order Gig on Fiverr</a>
+        <a href="#projects" class="btn-secondary">View Implementation Demos</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services / Gigs Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Popular Fiverr Gigs & Offerings</h2>
+      <p class="section-desc">Tailored ServiceNow solutions with quick turnaround, clean architecture, and well-documented update sets.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <div>
+            <div class="card-tag">ITSM & Workflows</div>
+            <h3>Catalog Builder & Flow Designer</h3>
+            <p>Complex multi-stage approvals, automated task generation, custom flow actions, and dynamic client-side catalog UI policies.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $40</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Integration Architecture</div>
+            <h3>REST API & Webhook Integrations</h3>
+            <p>Bidirectional third-party data synchronization via scripted REST APIs, Outbound REST messages, token authentication, and error handling.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $80</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Frontend & Experience</div>
+            <h3>Service Portal & Custom Widgets</h3>
+            <p>Modernized end-user portals using HTML5, Bootstrap, AngularJS, and CSS. Custom ticket trackers, approval panels, and guided onboarding.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $65</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Scripting & Optimization</div>
+            <h3>Business Rules & Script Includes</h3>
+            <p>Server-side GlideRecord / GlideAggregate scripting, performance tuning, ACL security definitions, and client scripting (Client Script, UI Actions).</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $35</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Custom Apps</div>
+            <h3>Scoped Application Development</h3>
+            <p>End-to-end table schema design, dedicated application scopes, access control, automated notification triggers, and custom reporting.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $120</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-tag">Troubleshooting</div>
+            <h3>Bug Fixing & Upgrade Support</h3>
+            <p>Resolving script errors, skipped records during family upgrades, broken portal widgets, and email notification failure diagnostics.</p>
+          </div>
+          <div class="card-footer">
+            <span class="price-est">Starting at $30</span>
+            <a href="https://www.fiverr.com/" target="_blank" class="fiverr-btn" style="font-size: 0.8rem; padding: 0.35rem 0.7rem;">Book Gig</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competencies & Skills -->
+  <section id="skills" style="background: rgba(17, 24, 39, 0.4);">
+    <div class="container">
+      <h2 class="section-title">Technical Expertise</h2>
+      <p class="section-desc">Platform specializations across client-side scripts, platform engines, and enterprise integrations.</p>
+
+      <div class="skills-filter">
+        <button class="filter-btn active" onclick="filterSkills('all')">All</button>
+        <button class="filter-btn" onclick="filterSkills('platform')">Platform & Modules</button>
+        <button class="filter-btn" onclick="filterSkills('scripting')">Scripting & Code</button>
+        <button class="filter-btn" onclick="filterSkills('integration')">Integration & APIs</button>
+      </div>
+
+      <div class="tags-list" id="skillsContainer">
+        <span class="tech-pill" data-category="platform">ITSM (Incident, Problem, Change)</span>
+        <span class="tech-pill" data-category="platform">Flow Designer</span>
+        <span class="tech-pill" data-category="platform">Catalog Builder & Variable Sets</span>
+        <span class="tech-pill" data-category="platform">Service Portal Widgets</span>
+        <span class="tech-pill" data-category="platform">Hardware Asset Management (HAM)</span>
+        <span class="tech-pill" data-category="scripting">JavaScript (ES6+)</span>
+        <span class="tech-pill" data-category="scripting">GlideRecord / GlideAjax</span>
+        <span class="tech-pill" data-category="scripting">Script Includes (Object Oriented)</span>
+        <span class="tech-pill" data-category="scripting">Client Scripts & UI Policies</span>
+        <span class="tech-pill" data-category="scripting">Business Rules (Async/Display/Before)</span>
+        <span class="tech-pill" data-category="integration">Scripted REST APIs</span>
+        <span class="tech-pill" data-category="integration">Outbound REST / JSON Webhooks</span>
+        <span class="tech-pill" data-category="integration">OAuth 2.0 & Token Auth</span>
+        <span class="tech-pill" data-category="integration">External Cloud Integrations</span>
+        <span class="tech-pill" data-category="platform">Update Set Management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Use Cases -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Case Studies & Recent Solutions</h2>
+      <p class="section-desc">Proven delivery patterns built for enterprise scalability.</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-tag">Integration</div>
+          <h3>Automated Webhook Ingestion Engine</h3>
+          <p>Architected custom Scripted REST API endpoints to intake external JSON payloads, parse key metadata, and automatically trigger ITSM catalog item generation.</p>
+          <div style="font-size: 0.85rem; color: var(--sn-green);">Result: 90% reduction in manual intake time</div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Service Portal</div>
+          <h3>Custom Employee Self-Service Hub</h3>
+          <p>Redesigned a client portal with custom responsive widgets, live approval action buttons, and asynchronous real-time request tracking.</p>
+          <div style="font-size: 0.85rem; color: var(--sn-green);">Result: 4.8/5 end-user satisfaction score</div>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Architecture</div>
+          <h3>Enterprise Scoped Tracking System</h3>
+          <p>Built a scoped application with granular ACL permissions, daily scheduled script executions, and automated SLA breach escalations.</p>
+          <div style="font-size: 0.85rem; color: var(--sn-green);">Result: Clean zero-conflict upgrade path</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Me -->
+  <section style="background: rgba(17, 24, 39, 0.4);">
+    <div class="container">
+      <h2 class="section-title">Why Buyers Choose My Services</h2>
+      <p class="section-desc">Professional standards applied to every Fiverr delivery.</p>
+
+      <div class="features-row">
+        <div class="feature-item">
+          <h4>Clean Update Sets</h4>
+          <p>Strict naming conventions and zero collision risk for your sub-production and production instances.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Full Documentation</h4>
+          <p>Every delivered script includes complete comments, user stories, and test case verification notes.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Rapid Revisions</h4>
+          <p>Prompt communication, transparent milestones, and post-delivery instance support.</p>
+        </div>
+        <div class="feature-item">
+          <h4>ServiceNow Best Practices</h4>
+          <p>Adherence to ServiceNow standards: minimizing table bloat and keeping code maintainable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 0.5rem;">© 2026 ServiceNow Solutions. Professional Independent Freelancer.</p>
+      <p>Direct Fiverr contact: <a href="https://www.fiverr.com/" target="_blank" style="color: var(--sn-green); text-decoration: none; font-weight: 600;">Contact Me on Fiverr</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Skill Filter Mechanism
+    function filterSkills(category) {
+      const pills = document.querySelectorAll('.tech-pill');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      pills.forEach(pill => {
+        if (category === 'all' || pill.getAttribute('data-category') === category) {
+          pill.style.display = 'inline-block';
+        } else {
+          pill.style.display = 'none';
+        }
+      });
+    }
+
+    // Smooth Scroll Handling for In-Page Anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
